@@ -7,7 +7,7 @@ The app finds the keyboard by its USB vendor and product IDs, set at the top of 
 
 Requests are sent in 57-byte chunks: `[command, total length (3 bytes little-endian), offset (3 bytes), 57 data bytes]`.
 A frame is `[0x0F, 0x03]` followed by 106 LEDs of RGB, and `[0x07]` is a keepalive. The loop runs every 40 ms (a full
-frame takes about 6 ms). LED numbers come from the OpenRGB map. Other software that drives the lights must be closed.
+frame takes about 6 ms). LED numbering is based on the [OpenRGB](https://openrgb.org) keyboard map (OpenRGB is GPL-2.0 licensed). Other software that drives the lights must be closed.
 Without keepalives the keyboard returns to its own lighting after a few seconds.
 
 ## Key capture

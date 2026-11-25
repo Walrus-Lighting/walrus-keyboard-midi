@@ -21,7 +21,7 @@ cat > "$APP/Contents/Info.plist" <<PLIST
 <dict>
   <key>CFBundleName</key><string>Walrus Keyboard MIDI</string>
   <key>CFBundleDisplayName</key><string>Walrus Keyboard MIDI</string>
-  <key>CFBundleIdentifier</key><string>com.killogee.walruskeyboardmidi</string>
+  <key>CFBundleIdentifier</key><string>com.walruslighting.keyboardmidi</string>
   <key>CFBundleExecutable</key><string>WalrusKeyboardMIDI</string>
   <key>CFBundleIconFile</key><string>AppIcon</string>
   <key>CFBundlePackageType</key><string>APPL</string>
@@ -37,7 +37,7 @@ PLIST
 # Signing: set SIGN_IDENTITY to the name of a code-signing certificate in your keychain and macOS keeps the
 # permissions you grant across rebuilds. Without one, the app gets an ad-hoc signature and macOS asks for
 # Accessibility / Input Monitoring again after every build. SIGN_IDENTITY=- forces ad-hoc.
-IDENTITY="${SIGN_IDENTITY:-Fnatic Board Local Signing}"
+IDENTITY="${SIGN_IDENTITY:--}"
 if [ "$IDENTITY" != "-" ] && security find-identity -p codesigning | grep -q "$IDENTITY"; then
   codesign --force --deep --sign "$IDENTITY" "$APP"
 else

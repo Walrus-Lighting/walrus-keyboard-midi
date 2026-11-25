@@ -75,6 +75,10 @@ Without one, the app is signed ad hoc and macOS asks for permissions again after
 Issues and pull requests are welcome. Please keep the app free of third-party dependencies, so it keeps building
 with just the Command Line Tools.
 
+## Credits
+
+The keyboard's LED numbering is based on the [OpenRGB](https://openrgb.org) project's map. Thank you to its contributors.
+
 ## Licence
 
 MIT for the code. The Walrus Lighting name, logo and icon are not licensed for reuse. See [LICENSE](LICENSE).
