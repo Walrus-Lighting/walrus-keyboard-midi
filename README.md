@@ -8,6 +8,11 @@ A Mac app that turns a **Fnatic miniSTREAK** keyboard into a **Lightkey** button
 the keyboard, pick a type and a colour, and the keyboard's LEDs and a virtual MIDI controller do the rest.
 Open source, so change it however you like.
 
+> **Made for one keyboard.** This app was written for the Fnatic miniSTREAK and only works with it. Other
+> keyboards will not be detected, and their lighting protocols differ. If you want to use a different board, you
+> will need to adapt the code yourself, mainly `Sources/HIDLink.swift` (finding the device and sending LED data) and
+> `Sources/Keys.swift` (the key list and LED numbers). Pull requests adding other keyboards are welcome.
+
 ## Features
 
 - **Key types:** Off, Static, Toggle, Flash, Tap, Beat, ×2, ÷2.

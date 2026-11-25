@@ -2,7 +2,7 @@
 
 ## Keyboard lighting
 
-The Fnatic USB ID is `2F0E:0103` (`0102` is also accepted). The lighting channel is the vendor-defined HID interface
+The app finds the keyboard by its USB vendor and product IDs, set at the top of `Sources/HIDLink.swift`. The lighting channel is the vendor-defined HID interface
 (usage page `0xFF00`, 64-byte output reports). The other interface is the normal keyboard.
 
 Requests are sent in 57-byte chunks: `[command, total length (3 bytes little-endian), offset (3 bytes), 57 data bytes]`.
